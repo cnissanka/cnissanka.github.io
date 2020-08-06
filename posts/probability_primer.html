@@ -29,12 +29,22 @@
         <div class="container" style="margin-top: 5%">
 
 
-	<h2>A Probability Theory Cheat Sheet</h2> 
+	<h2>Summary of Basic Discrete Probability Theory</h2> 
 
-	<p style="margin-top:3%">This is a cheat sheet in all the probability theory fundamentals of basic probability theory. We are going to quickly go over basic set theory, define a probability of an event, define what conditional probability means, independence of events & conditional independence, finally proving Bayes theroem.</p>
+	<p style="margin-top:3%">This is a summary that gives a summary of the important concepts of basic probability theory.</p>
+
+	<h4>Quick Links</h4>
+	<ol>
+		<li><a href="#settheory">Basic Set Theory</a></li>
+		<li><a href="#probabilisticmodels">Probabilistic Models</a></li>
+		<li><a href="#conditionalprobability">Conditional Probability</a></li>
+		<li><a href="#multiplicationrule">Multiplication Rule</a></li>
+		<li><a href="#totalprobability">Total Probability Theorem</a></li>
+		<li><a href="#bayesrule">Derving the Bayes Rule</a></li>
+	</ol>
 
 
-	<h4 style="margin-top:3%">Basic Set Theory</h4>
+	<h4 style="margin-top:3%" id="settheory">Basic Set Theory</h4>
 	<p>A set is a collection of objects, which are the elements of the set.</p>
 
 	<p>A set \(S\) can be defined as \( S = \{x_1, x_2, ...., x_n\}\) 
@@ -98,20 +108,71 @@
 	  <p>First lets prove the union law, of the Demorgan's law </p>
 	  <p>\[ (S \cup V)^c = S^c \cap V^c \] 
 	  \[ x \in  (S \cup V)^c \]
-	  \[ x \notin  S \] and \[ x \notin V \]
-	  \[ x \in S^c \] and
-	  \[ x \in V^c \]
-	  \[ x \in (S^c \cap V^c )\] </p>
+	  \[ x \notin  S \text{ and } x \notin V \] 
+	  \[ x \in S^c \text{ and } x \in V^c \] 
+	  \[ \text{Therefore, } x \in (S^c \cap V^c )\] </p>
 
 	  <br/><br/><br/>
 	  <p>Second lets prove the interesection law of the Demorgan's law</p>
 	  <p>\[ (S \cap V)^c = S^c \cup V^c \] 
 	  \[ x \in  (S \cap V)^c \]
-	  \[ x \notin  S \]  or \[ x \notin V \]
-	  \[ x \in S^c \] or
-	  \[ x \in V^c \]
-	  \[ x \in (S^c \cup V^c )\] </p>
+	  \[ x \notin  S \text{ or } x \notin V \]  
+	  \[ x \in S^c \text{ or }  x \in V^c\] 
+	  \[ \text{Therefore, } x \in (S^c \cup V^c )\] </p>
 
+	  <br/><br/><br/>
+	  <h4 id="probabilisticmodels">Probabilistic Models</h4>
+	  <p>A mathematical description of an uncertain situation</p>
+	  <p>Elements of a probabilistic model include the sample space \( \Omega \), which outlines all the possible 
+	  outcomes of an experiment</p>
+	  <p>The probability law assigns a nonnegative number to a set A of possible outcomes. 
+	  \[ A = \{x_1, x_2, x_3 \} \]
+	\[ P(x_1) \geq 0 \]
+	\[ P(x_2) \geq 0 \]
+	\[ P(x_3) \geq 0 \]
+     \[ P(x_1) + P(x_2) + P(x_3) = 1 \]</p>
+     <p>The probabilistic model involves an underlying process called the experiment, which produces exactly one out of several possible outcomes. Different elements of the sample space should be distinct and mutually exclusive, so that when the experiment is carried out there is an unique outcome.
+
+     \[P(A) \geq 0, \text{for every event } A \]
+  	 \[P(A \cup B) = P(A) + P(B) \text{     iff    } A \cap B = \emptyset \]</p>
+  	 \[ \text{ if the sample space is discrete & } A_1 \text{ to } A_n \text{ are disjoint, then } P(\bigcup_{i}^{n} A_i) = P(A_1 \cup A_2 \cup A_3 .... \cup A_n) = P(A_1) + P(A_2) + ... + P(A_n) = \sum_{i=1}^{n} P(A_i) \]
+  	 \[P(\Omega) = 1 \]
+
+  	 \[\text{If } A \subset B \text{ then } P(A) \leq P(B) \]
+  	 \[P(A \cup B) = P(A) + P(B) - P(A \cap B) \]
+  	 \[P(A \cup B) \leq P(A) + P(B) \]
+  	 \[P(A \cup B) = P(A) + P(B) \text{ iff } A \cap B = \emptyset\]
+  	 \[P(A \cup B) = P(A) + P(A^c \cap B) \]
+  	 \[\text{Generally, for a sequence of events A, } P(\bigcup_i^n A_i) \leq \sum_i^n P(A_i)\]
+ 
+  	 <h4 id="conditionalprobability">Conditional Probability</h4>
+  	 <p>Conditional probability is about finding probabilities of events, given prior information about the environment.</p>
+  	 <p>\[ \text{If } P(B) \text{ > 0, then } P(A|B) = \frac{P(A \cap B)}{P(B)} \]</p>
+  	 <p>\[\text{If } P(B) \text{ > 0, then } P(\Omega|B) = \frac{P(\Omega \cap B)}{P(B)}\]</p>
+  	 <p>\[ \text{If any two events are disjoint, } P(A_1 \cup A_2 | B) = P(A_1 | B) + P(A_2 | B) \]</p>
+  	 <p>\[\text{If any given number of n events, which are disjoint, } P(\bigcup_{i=1}^{n} A_i | B ) = P(A_1 | B ) + ... + P(A_n | B ) \]</p>
+  	 <p>\[\text{Generally, for any given event A,B and C : } P(A \cup C | B) \leq P(A|B) + P(C|B)\]</p>
+  	 <p>\[\text{Generally, } P(\bigcup_{i=1}^{n} A_i | B ) \leq P(A_1 | B ) + ... + P(A_n | B ) \]</p>
+
+  	 <h4 id="multiplicationrule">Multiplication Rule</h4>
+  	 <p>\[ P(A \cap B) = P(B)P(A|B) = P(B) . \frac{P(A \cap B)}{P(B)} = P(A \cap B)\]</p>
+  	 <p>\[ \text{Generally, } P(\bigcap_{i=1}^{n} A_i) = P(A_1) . P(A_2 | A_1) . P(A_3 | A_2 \cap A_1) ... P(A_n | \bigcap_{i=1}^{n-1} A_i)\]</p>
+	 <p>\[\]</p>
+
+
+	 <h4 id="totalprobability">Total Probability Theorem </h4>
+	 <p>If \( A_1, A_2 , ... , A_n\) are disjoint events, and \( A_1 \cup A_2 \cup A_3 \cup ... \cup A_n  = \Omega \), then assuming that \( P(A_i) \gt 0 \text{ } \forall \text{ } i  \), if any event \( B \) occurs, then 
+	 \[ P(B) = P(A_1)P(A_1 \cap B) + P(A_2)P(A_2 \cap B) + ... + P(A_n)P(A_n \cap B) = \sum_{i=1}^{n} P(A_i)P(A_i \cap B)\]</p>
+
+	 <h4 id="bayesrule">Deriving the Baye's Rule</h4>
+	 <p>If \( A_1, A_2 , ... , A_n\) are disjoint events, and \( A_1 \cup A_2 \cup A_3 \cup ... \cup A_n  = \Omega \), then assuming that \( P(A_i) \gt 0 \text{ } \forall \text{ } i  \), if any event \( B \) occurs, then</p>
+	 <p>\[P(A_i | B) = \frac{P(B \cap A_i)}{P(B)}\]</p>
+	 <p>\[P(B|A_i) = \frac{P(B \cap A_i)}{P(A_i)} \text{, therefore }\]
+	 \[P(B \cap A_i) = P(A_i) . P(B|A_i) \]</p>
+	 <p>\[ \text{By subsitution, we get the Baye's rule, like so,  } \]
+	 \[ P(A_i | B) = \frac{P(A_i) . P(B|A_i)}{P(B)}  \]</p>
+	 <p>\[ \text{Since } P(B) = \sum_{i=1}^{n} P(A_i)P(A_i \cap B) \text{ by the total probabiliy theromn, we can generalize further, }\]
+	 \[ P(A_i | B) = \frac{P(A_i) . P(B|A_i)}{\sum_{i=1}^{n} P(A_i)P(A_i \cap B)} \]</p>
 </div>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
