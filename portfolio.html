@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chirath Nissanka / Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+      <div class="container">
+        <div class="header">
+          <span id="back" class="material-icons" style="font-size:3vw" onClick="performAction(event)">
+            keyboard_backspace
+          </span>
+          <h2>Portfolio</h2>
+        </div>
+        <div class="panel">
+          <div class="left">
+              <div class="cards">
+                <div class="card">
+                    <h5>Gwitter</h5>
+                    <p>
+Gwitter is a clone of Twitter that I am working on as a side project to practice & improve my skills in React, CSS design, and NodeJS. This self project aims to replicate the inner workings of Twitter and use distributed systems design to make a decentralized social media network in the future.
+                    </p>
+                    <div class="btn-panel">
+                      <button id='gwitter_code' onclick="performAction(event)">Code</button>
+                      <button id='gwitter_site' onclick="performAction(event)">Site</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h5>Japanese Hiragana/Katakana App</h5>
+                    <p>
+                      This application is a personal project of mine to help me learn and memorize Hiragana and Katakana's alphabet and aid me in my journey to becoming better at Japanese. Currently, I am improving this project to add more game mechanics to the game, such as a leaderboard and more visual effects.
+                    </p>
+                    <div class="btn-panel">
+                      <button id='japan_code' onclick="performAction(event)">Code</button>
+                      <button id='japan_site' onclick="performAction(event)">Site</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h5>Aurora Automotive</h5>
+                    <p>
+                      Aurora Automotive, which specialized in fleet management, needed a marketing surveying form filled by potential customers. A cloud Firebase instance stores the survey data, React was used for the front-end implementation, with Material UI components. This application used functional programming principles for clean, maintainable application design.   </p>
+                    <div class="btn-panel">
+                      <button id='aurora_view' onclick="performAction(event)">Site</button>
+                    </div>
+                </div>
+              </div>
+          </div>
+          <div class="right">
+            <div class="cards">
+              <div class="card">
+                  <h5>Command Line Music Player</h5>
+                  <p>
+                    A music player inspired by command-line application interfaces and connected to a youtube streaming service enables the user to listen to music. This project is developed using Python and ncurses.
+                  </p>
+                  <div class="btn-panel">
+                    <button id='music_code' onclick="performAction(event)">Code</button>
+                    </div>
+              </div>
+              <div class="card">
+                  <h5>Conway's Game of Life</h5>
+                  <p>
+
+Conway's game of life was something I wanted to create, and I implemented the simulation using Python and the processing library for the graphic rendering. The simulation works on four simple rules which simulate the mechanics of the game.
+                  </p>
+                  <div class="btn-panel">
+                    <button id='conway' onclick="performAction(event)">Code</button>
+                  </div>
+              </div>
+              <div class="card">
+                  <h5>Merkle Tree using Stack</h5>
+                  <p>
+                  I had a fascination for distributed systems and decentralized system design. Therefore I stumble upon the Merkle tree, which is used to verify the blockchain in cryptocurrencies. Therefore I decided to implement one using Python.
+                  </p>
+                    <div class="btn-panel">
+                    <button id='merkle_code' onclick="performAction(event)">Code</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        function showInTab(s){
+          window.open('https://' + s);
+        }
+
+        function performAction(e){
+          const id = e.currentTarget.id;
+          if (id === 'back'){
+            window.location.href = './index.html';
+          }else if (id === 'gwitter_code'){
+            showInTab('github.com/oysters76/gwitter')
+          }else if (id === 'gwitter_site'){
+            showInTab('eloquent-curie-defb48.netlify.app/')
+          }else if (id === 'japan_code'){
+            showInTab('github.com/oysters76/JapaneseFlashCards')
+          }else if (id === 'japan_site'){
+            showInTab('unruffled-heyrovsky-cf73cf.netlify.app/')
+          }else if (id === 'aurora_view'){
+            showInTab('')
+          }else if (id === 'music_code'){
+            showInTab('github.com/artwithcode/soul-music')
+          }else if (id === 'merge_code'){
+            showInTab('gist.github.com/cnissanka/53f795a841d30f64444725f4851e8b67')
+          }else if (id === 'merkle_code'){
+            showInTab('gist.github.com/cnissanka/903f30ac84249e0e03797ef334b850b5')
+          }else if (id === 'conway'){
+            showInTab('github.com/artwithcode/ConwaysGameOfLife')
+          }
+        }
+      </script>
+  </body>
+</html>

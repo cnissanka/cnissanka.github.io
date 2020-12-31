@@ -1,0 +1,161 @@
+body{
+  margin:0;
+  padding:0;
+  width:100vw;
+  height:100vh;
+  overflow: hidden;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  height: 100%;
+  background-image: url("https://images.pexels.com/photos/2501965/pexels-photo-2501965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+ ;
+  justify-content: flex-start;
+  align-items:center;
+}
+
+h2{
+  color:#808080	;
+  font-size: 4vw;
+  margin-top:3vw;
+  text-shadow: 2px 4px white;
+  transform: translate(0, -20vw);
+  animation: h2Entrance 1s 1;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes h2Entrance {
+  0%{
+    transform: translate(0,-20vw);
+  }
+  100%{
+    transform: translate(0,0);
+  }
+}
+
+
+img{
+  position: absolute;
+  width:7vw;
+  height: 7vw;
+  border-radius:50%;
+  z-index: 2;
+  top:15vh;
+  margin-top: 5vh;
+  transform: translate(0, -20vh);
+  animation: h2Entrance 1s 1;
+  animation-fill-mode: forwards;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  width:40vw;
+  height: 50vh;
+  background-color: white;
+  z-index: 1;
+  margin-top: 5vh;
+  box-shadow: 2px 2px 1px solid #808080;
+  transform: translate(0, 100vh);
+  animation: divEntrance 1s 1;
+  animation-fill-mode: forwards;
+}
+
+.main p{
+  margin: 0 2vw;
+  margin-top:4vw;
+  text-align: justify;
+  font-size: 1.2vw;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  background-color: none;
+  width:40vw;
+  height: 10vh;
+  margin-top: 2vw;
+  transform: translate(0, 100vh);
+  animation: divEntrance 1s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes divEntrance {
+  0%{
+    transform: translate(0,100vw);
+  }
+  100%{
+    transform: translate(0,0);
+  }
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width:40%;
+}
+
+span{
+  position: absolute;
+  z-index: 1;
+  margin-right: 36%;
+  color:#808080	;
+  text-shadow: 2px 2px white;
+  transform: translate(0, -20vw);
+  animation: h2Entrance 1s 1;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+span:hover{
+  color: black;
+}
+
+
+.buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  height: 5vh;
+  font-size: 1vw;
+  border: none;
+  border-radius: 2vw;
+  padding: 0 2vw;
+  text-align: center;
+  margin-left:1vw;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #808080;
+  color:white;
+
+  text-transform: capitalize;
+}
+
+button:hover{
+  background-color:white;
+  border: 5px solid #808080;
+  color:#808080;
+}
+
+button:focus{
+  outline: none;
+}
+
+a{
+  width:100%;
+  margin-top:2vw;
+  text-align: justify;
+  font-size: 1.2vw;
+  text-align: center;
+  font-weight: bold;
+}

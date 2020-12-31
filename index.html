@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chirath Nissanka</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Hello, I'm Chirath Nissanka</h2>
+      <h4>
+        A full-stack developer who is proficient in core javascript, CSS, and NodeJS. I do front-end development using React and Redux and backend development using Java, Python, and Javascript. Highly experienced in Test-driven development, CICD pipeline workflow, and working with versioning control systems (Git & SVN).
+      </h4>
+      <div class="btns">
+        <button onclick="performEvent(event)" id="blog">Blog</button>
+        <button onclick="performEvent(event)" id="port">Portfolio</button>
+        <button onclick="performEvent(event)" id="about">About</button>
+      </div>
+    </div>
+    <script>
+      function performEvent(e){
+        if (e.currentTarget.id === 'blog'){
+
+        }
+        else if (e.currentTarget.id === 'port'){
+          window.location.href = './portfolio.html';
+        }
+        else if (e.currentTarget.id === 'about'){
+          window.location.href = './about.html';
+        }
+      }
+    </script>
+  </body>
+</html>

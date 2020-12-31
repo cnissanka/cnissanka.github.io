@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chirath Nissanka / About</title>
+    <link rel="stylesheet" href="about.css" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <span id="back" class="material-icons" style="font-size:3vw" onClick="performAction(event)">
+          keyboard_backspace
+        </span>
+        <h2>About Me</h2>
+      </div>
+      <img src="profile.jpg" />
+      <div class="main">
+        <p>
+          My current work involves updating legacy systems to the latest technologies and requirements of customers. Therefore I have experience working with large-scale codebases effectively. I focus on core javascript and CSS for front end related work with state management and functional programming principles to implement complex systems. I have extensive experience working with large-scale Java-based codebases and the drive to learn new concepts immediately. Feel free to reach me at,
+        </p>
+        <a href="mailto:chirath.nishshanka@gmail.com"><label>chirath.nishshanka@gmail.com </label></a>
+      </div>
+      <div class="contact">
+        <div class="buttons">
+          <button id='linkedin' onclick="performAction(event)">Linkedin Profile</button>
+          <button id='cv' onclick="performAction(event)">View my CV</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function performAction(e){
+        if (e.currentTarget.id === 'back'){
+          window.location.href = './index.html';
+        }else if (e.currentTarget.id === 'linkedin'){
+          window.open('https://www.linkedin.com/in/chirath-nishshanka');
+        }else if (e.currentTarget.id === 'cv'){
+          window.open('./Chirath Nissanka.pdf');
+        }
+      }
+    </script>
+  </body>
+</html>

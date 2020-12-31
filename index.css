@@ -1,0 +1,100 @@
+body{
+  margin:0;
+  padding:0;
+  width:100vw;
+  height:100vh;
+  overflow: hidden;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width:100vw;
+  height: 100%;
+  background-image: url("https://images.pexels.com/photos/2501965/pexels-photo-2501965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+ ;
+  justify-content: flex-start;
+  align-items:center;
+}
+
+h2{
+  color:#808080	;
+  font-size: 4vw;
+  margin-top:10vw;
+  text-shadow: 2px 4px white;
+  transform: translate(90vw, 0);
+  animation: h2Entrance 2s 1;
+  animation-fill-mode: forwards;
+}
+
+h4{
+  display: block;
+  font-size: 2vw;
+  margin-top: -2vw;
+  width:50%;
+  text-align: center;
+  color:white	;
+  text-shadow: 1px 1px white, 3px 4px #808080;
+  transform: translate(-90vw, 0);
+  animation: h4Entrance 2s 1;
+  animation-fill-mode: forwards;
+}
+
+.btns{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width:20vw;
+  transform: translate(0, 90vw);
+  animation: btnEntrance 2s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes btnEntrance {
+  0%{
+    transform: translate(0, 90vw);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes h2Entrance {
+  0%{
+    transform: translate(90vw, 0);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes h4Entrance {
+  0%{
+    transform: translate(-90vw, 0);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}
+
+.btns button{
+  height: 5vh;
+  font-size: 1vw;
+  border: none;
+  border-radius: 2vw;
+  padding: 0 2vw;
+  text-align: center;
+  margin-left:2vw;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btns button:hover{
+  background-color: #808080;
+  color:white;
+}
+
+.btns button:focus{
+  outline: none;
+}
