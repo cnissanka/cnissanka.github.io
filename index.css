@@ -4,6 +4,7 @@ body{
   width:100vw;
   height:100vh;
   overflow: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container{
@@ -97,4 +98,28 @@ h4{
 
 .btns button:focus{
   outline: none;
+}
+
+
+@media screen and (max-width:600px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h2{
+    margin-top:-5vh;
+    font-size: 8vw;
+  }
+  h4{
+    font-size: 3vw;
+  }
+  .btns{
+    width:80%;
+  }
+  .btns button{
+    width:100%;
+    font-size: 3vw;
+  }
 }

@@ -4,6 +4,7 @@ body{
   width:100vw;
   height:100vh;
   overflow: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container{
@@ -158,4 +159,52 @@ a{
   font-size: 1.2vw;
   text-align: center;
   font-weight: bold;
+}
+
+@media screen and (max-width:600px) {
+  body{
+    overflow-y: auto;
+    height: 100%;
+  }
+  .container{
+    background-size: cover;ze: cover;
+  }
+
+  h2{
+    font-size: 5vh;
+  }
+
+  img{
+    width:20vw;
+    height: 20vh;
+    margin-top: -5vh;
+  }
+  .main{
+    height: 100%;
+    margin-top: 6vh;
+    width:90%;
+    padding: 0 1vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2vw;
+  }
+  .main p{
+    margin-top: 15vh;
+    font-size: 5vw;
+    word-wrap: break-word;
+    text-align: center;
+    width: 90%;
+  }
+  label{
+    font-size: 5vw;
+  }
+  .contact{
+    width: 70%;
+  }
+  button{
+    font-size: 3vw;
+    width: 100%;
+    text-align: center;
+  }
 }

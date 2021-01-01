@@ -4,6 +4,7 @@ body{
   width:100vw;
   height:100vh;
   overflow: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container{
@@ -179,4 +180,171 @@ span{
 
 span:hover{
   color: black;
+}
+
+
+@media screen and (min-width:0px) and (max-width:600px) {
+  h2{
+    font-size:5vw;
+  }
+  .card h5{
+    font-size: 3vw;
+  }
+
+  .card button{
+    font-size: 2vw;
+  }
+
+  .card{
+    width:50%;
+    padding: 0 2vw;
+  }
+  body{
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  .container{
+    background-size: cover;
+    height: 100%;
+  }
+
+  .panel{
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20vh;
+  }
+  .left{
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 6vh;
+  }
+  .right{
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width:100%;
+  }
+  .cards{
+    flex-direction: column;
+  }
+  .card{
+    margin-bottom: 2vh;
+    padding: 2vw;
+  }
+}
+
+
+@media screen and (min-width:600px) and (max-width:768px) {
+  h2{
+    font-size:5vw;
+  }
+  .card h5{
+    font-size: 3vw;
+  }
+
+  .card button{
+    font-size: 2vw;
+  }
+
+  .card{
+    width:50%;
+    padding: 0 2vw;
+  }
+  body{
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  .container{
+    background-size: cover;
+    height: 100%;
+  }
+
+  .panel{
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20vh;
+  }
+  .left{
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 6vh;
+  }
+  .right{
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width:100%;
+  }
+  .cards{
+    flex-direction: column;
+  }
+  .card{
+    margin-bottom: 2vh;
+    padding: 2vw;
+  }
+}
+
+
+@media screen and (min-width:600px) and (max-width:1200px) {
+
+  h2{
+    font-size:5vw;
+  }
+  .card h5{
+    font-size: 3vw;
+  }
+
+  .card button{
+    font-size: 2vw;
+  }
+
+  .card{
+    width:50%;
+    padding: 0 2vw;
+  }
+  body{
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  .container{
+    background-size: cover;
+    height: 100%;
+  }
+
+  .panel{
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20vh;
+  }
+  .left{
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 6vh;
+  }
+  .right{
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width:100%;
+  }
+  .cards{
+    flex-direction: column;
+  }
+  .card{
+    margin-bottom: 2vh;
+    padding: 2vw;
+  }
+}
+
+@media screen and (min-width:1200px) {
+
 }
